@@ -8,6 +8,18 @@
                 "description": "The name of the Sentinel workspace where the automation rule will be deployed"
             }
         },
+        "ResourceGroupName": {
+            "type": "string",
+            "defaultValue": "[resourceGroup().name]"
+        },
+        "TenantID": {
+            "type": "string",
+            "defaultValue": "[subscription().tenantId]"
+        },
+        "SubscriptionID": {
+            "type": "string",
+            "defaultValue": "[subscription().id]"
+        },    
         "automationRuleName": {
             "type": "string",
             "metadata": {
@@ -35,7 +47,7 @@
                         "propertyName": "IncidentRelatedAnalyticRuleIds",
                         "operator": "Contains",
                         "propertyValues": [
-                        "/subscriptions/c134eade-1676-4481-8e67-fc6d575df013/resourceGroups/RG-Microsoft-Sentinel-NE/providers/Microsoft.OperationalInsights/workspaces/Microsoft-Sentinel/providers/Microsoft.SecurityInsights/alertRules/46a20892-146c-422b-890e-4245faba3818"
+                            "[concat(parameters('SubscriptionID'),'/resourceGroups/',parameters('ResourceGroupName'),'/providers/Microsoft.OperationalInsights/workspaces/',parameters('workspace'),'/providers/Microsoft.SecurityInsights/alertRules/46a20892-146c-422b-890e-4245faba3818')]"
                         ]
                     }
                     }
@@ -46,8 +58,8 @@
                     "order": 1,
                     "actionType": "RunPlaybook",
                     "actionConfiguration": {
-                    "logicAppResourceId": "/subscriptions/c134eade-1676-4481-8e67-fc6d575df013/resourceGroups/RG-Microsoft-Sentinel-NE/providers/Microsoft.Logic/workflows/ChatGPTdemo1",
-                    "tenantId": "cc195398-fbd4-419e-896f-434731077e45"
+                    "logicAppResourceId": "[concat(parameters('SubscriptionID'),'/resourceGroups/',parameters('ResourceGroupName'),'/providers/Microsoft.Logic/workflows/ChatGPTdemo1')]",
+                    "tenantId": "[parameters('TenantID')]"
                     }
                 }
                 ]
