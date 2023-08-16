@@ -1,0 +1,42 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "workspace": {
+            "type": "string",
+            "metadata": {
+                "description": "The name of the Sentinel workspace where the automation rule will be deployed"
+            }
+        },
+        "ResourceGroupName": {
+            "type": "string",
+            "defaultValue": "[resourceGroup().name]"
+        },
+        "TenantID": {
+            "type": "string",
+            "defaultValue": "[subscription().tenantId]"
+        },
+        "SubscriptionID": {
+            "type": "string",
+            "defaultValue": "[subscription().id]"
+        },    
+        "automationRuleName": {
+            "type": "string",
+            "metadata": {
+                "description": "The name of the automation rule that will be deployed.."
+            },
+	    "defaultValue": "Automation Rule Name"
+        }
+    },
+    "resources": [
+        {
+            "type": "Microsoft.OperationalInsights/workspaces/providers/automationRules",
+            "name": "[concat(parameters('workspace'),'/Microsoft.SecurityInsights/',parameters('automationRuleName'))]",
+            "apiVersion": "2019-01-01-preview",
+            "properties": {
+                
+            }
+        }
+    ],
+    "outputs": {}
+}

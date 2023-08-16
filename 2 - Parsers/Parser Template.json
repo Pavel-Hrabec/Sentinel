@@ -1,0 +1,43 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "workspace": {
+      "type": "String"
+    },
+    "parser_id": {
+      "defaultValue": "[newGuid()]",
+      "type": "String"
+    },
+    "displayname": {
+      "type": "string",
+      "defaultValue": "Parser Template",
+      "metadata": {
+        "description": "Name for your parser"
+      }
+    },
+    "query": {
+      "type": "string",
+      "defaultValue": "print 'Parser from Github repository'",
+      "metadata": {
+        "description": "Type your query here (e.g. SigninLogs | take 10)"
+      }
+    }
+  },
+  "resources": [
+    {
+      "type": "Microsoft.OperationalInsights/workspaces/savedSearches",
+      "apiVersion": "2020-08-01",
+      "name": "[concat(parameters('workspace'), '/',parameters('parser_id'))]",
+      "properties": {
+        "etag": "*",
+        "category": "Sentinel",
+        "DisplayName": "[parameters('displayname')]",
+        "FunctionAlias": "Repository",
+        "Query": "[parameters('query')]",
+        "version": 2,
+        "functionParameters": "disabled:bool=False"
+      }
+    }
+  ]
+}
