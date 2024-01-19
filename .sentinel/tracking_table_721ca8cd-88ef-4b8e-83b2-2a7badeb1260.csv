@@ -1,14 +1,16 @@
 FileName, CommitSha
-4 - Hunting Queries/BlackCatRansowmare.json,491b9c8e181d1c00e3cce3bc85456f54217c39b9
 6 - Automation Rules/Run-ChatGPT-Playbook.json,ddf46a2692825289e76fd09995a2d5c4bab437c7
+5 - Playbooks/Block-AADUser-Incident.json,1ed9f3319f2d33aa1c632eb17280a854942234c6
+2 - Parsers/Parser Template.json,537acf6108de4c0d7d4da06a9603b9e572258e26
+7 - Workbooks/Microsoft Sentinel Cost.json,47cb40430d4aa89c3aa35c5f0e8aa0e032961a59
+7 - Workbooks/Workspace Usage Report.json,02b7152903b1c0a3d0b5f99508b5bfcbfdcd5fa2
+3 - Analytics Rules/User agent search for log4j exploitation attempt.json,f919b0ab7db2b52a01c2f3f3aa848530d2bf63cb
 3 - Analytics Rules/Process executed from binary hidden in Base64 encoded file.json,99f736ea509f1d2614359f4a0e9bfe7276ab1227
-5 - Playbooks/MicrosoftSentinel-ChatGPT-Playbook.json,328f46ab8b5e1eafa93513b1e9d321c7ca9326f8
-7 - Workbooks/Data Collection Rule Toolkit.json,0fe98120303a0bf5fa3ab74efdc248997b26c33d
+3 - Analytics Rules/Advanced Multistage Attack Detection.json,585291f4a79add3048bca76cd61b479241d11aee
 2 - Parsers/Repository Parser.json,cc4fae23499eb1908bbf617874d5cd9ca8e6a44d
 3 - Analytics Rules/Log4j vulnerability exploit.json,91917d9c313c783a8a6d202b9176fffabd28c98f
-5 - Playbooks/Block-AADUser-Incident.json,1ed9f3319f2d33aa1c632eb17280a854942234c6
-1 - Watchlist/Tor IP Addresses.json,81c92beb956e222ddad59058e8c20d716a81b772
-7 - Workbooks/Workspace Usage Report.json,02b7152903b1c0a3d0b5f99508b5bfcbfdcd5fa2
 3 - Analytics Rules/Azure Diagnostic settings removed from a resource.json,c7accd2d5e54b8c03aff6307f635b88463bb068f
-7 - Workbooks/Microsoft Sentinel Cost.json,47cb40430d4aa89c3aa35c5f0e8aa0e032961a59
-3 - Analytics Rules/User agent search for log4j exploitation attempt.json,f919b0ab7db2b52a01c2f3f3aa848530d2bf63cb
+4 - Hunting Queries/BlackCatRansowmare.json,491b9c8e181d1c00e3cce3bc85456f54217c39b9
+1 - Watchlist/Tor IP Addresses.json,81c92beb956e222ddad59058e8c20d716a81b772
+7 - Workbooks/Data Collection Rule Toolkit.json,0fe98120303a0bf5fa3ab74efdc248997b26c33d
+5 - Playbooks/MicrosoftSentinel-ChatGPT-Playbook.json,328f46ab8b5e1eafa93513b1e9d321c7ca9326f8
